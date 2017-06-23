@@ -1,7 +1,7 @@
 #include<stdio.h>
-int i,j,s,temp,array[20],size;
+int i,j,s,temp,array[20];
 
-int sort(int *array)
+int sort(int *array,int size)
 {
  
   for(i=1;i<size;i++){
@@ -19,12 +19,12 @@ return 0;
 int read()
 {
 
-
+int n;
 printf("\nenter the size: ");
-scanf("%d",&size);
-for(i=0;i<size;i++)
+scanf("%d",&n);
+for(i=0;i<n;i++)
 scanf("%d",&array[i]);
-
+return n;
 }
 
 
@@ -32,8 +32,8 @@ scanf("%d",&array[i]);
 int main(){
 
  
-read();
- sort(array);
+int size=read();
+ sort(array,size);
 
   printf("After sorting: ");
   for(i=0;i<size;i++)
